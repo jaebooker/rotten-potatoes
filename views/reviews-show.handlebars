@@ -1,6 +1,9 @@
 <h1>{{review.title}}</h1>
 <h2>{{review.movieTitle}}</h2>
 <h3>{{review.movieRating}} potatoes out of 4</h3>
-Go <a href="/">Back</a> Or you can <a href="/reviews/{{review._id}}/edit">Edit</a>
-<br>
+Go <a href="/">Back.</a> Or you can <a href="/reviews/{{review._id}}/edit">Edit.</a>
+     <p><form method="POST" action="/reviews/{{review._id}}?_method=DELETE">
+         <button type="submit">Destroy</button>
+     </form></p>
+ <br>
 <p>{{review.description}}</p>
