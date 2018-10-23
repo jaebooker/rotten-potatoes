@@ -1,6 +1,9 @@
 <center><h1>Reviews</h1></center>
+<a href="/reviews/new">New Review</a
 {{#each reviews}}
+  <br><br>
   <h2>{{this.movieTitle}}</h2>
   <h3>{{this.title}}</h3>
-  <br><br>
+  <p>{{this.description}}</p>
+  <br>
 {{/each}}
