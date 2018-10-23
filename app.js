@@ -7,6 +7,7 @@ mongoose.connect('mongodb://localhost/rotten-potatoes');
 const Review = mongoose.model('Review', {
   title: String,
   movieTitle: String,
+  movieRating: Number,
   description: String
 });
 var exphbs = require('express-handlebars');
