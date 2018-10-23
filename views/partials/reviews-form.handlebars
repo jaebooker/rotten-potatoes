@@ -1,0 +1,26 @@
+<fieldset>
+    <legned>Edit Review</legend>
+        <p>
+            <label for="review-title">Title</label><br>
+            <input id="review-title" type="text" name="title" value="{{review.title}}"/>
+        </p>
+        <p>
+            <label for="movie-title">Movie Title</label><br>
+            <input id="movie-title" type="text" name="movieTitle" value="{{review.movieTitle}}" />
+        </p>
+        <p>
+            <label for="movieRating">Rating</label><br>
+            <select name="movieRating">
+        <option value = "{{review.movieRating}}">{{review.movieRating}}</option>
+        <option value="0">Just the worst</option>
+        <option value="1">Terrible</option>
+        <option value="2">Meh</option>
+        <option value="3">Cool</option>
+        <option value="4">The Best, the Best, the Best</option>
+          </select>
+        </p>
+        <p>
+            <label for="review-description">Description</label><br>
+            <textarea id="review-description" name="description" rows="10"/>{{review.description}}</textarea>
+        </p>
+    </fieldset>

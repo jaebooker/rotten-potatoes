@@ -1,31 +1,8 @@
 <form method="POST" action="/reviews">
-    <fieldset>
-        <legend>Write A Review</legend>
-        <p>
-            <label for="title">Review Title</label><br>
-            <input type="text" name="title" />
-        </p>
-        <p>
-      <label for="movieTitle">Movile Title</label><br>
-      <input type="text" name="movieTitle" />
-  </p>
-  <p>
-      <label for="movieRating">Rating</label><br>
-      <select name="movieRating">
-  <option value="0">Just the worst</option>
-  <option value="1">Terrible</option>
-  <option value="2">Meh</option>
-  <option value="3">Cool</option>
-  <option value="4">The Best, the Best, the Best</option>
-    </select>
-  </p>
-  <p>
-      <label for="description-text">Review</label><br>
-      <textarea id="description-text" name="description" rows="10" /></textarea>
-  </p>
-</fieldset>
+    {{> reviews-form}}
   <p>
       <button type="submit">Submit Review</button>
   </p>
 
 </form>
+<a href="../">Quit</a>
