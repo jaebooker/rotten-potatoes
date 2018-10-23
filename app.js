@@ -13,8 +13,5 @@ app.listen(3000, () => {
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.get('/', (req, res) => {
-  res.render('home', { msg: 'I can run my routes with no handlebars.' });
-})
-app.get('/reviews', (req, res) => {
   res.render('reviews-index', { reviews: reviews });
 })
