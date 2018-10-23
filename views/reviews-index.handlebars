@@ -2,8 +2,7 @@
 <a href="/reviews/new">New Review</a
 {{#each reviews}}
   <br><br>
-  <h2>Film: {{this.movieTitle}} - {{this.movieRating}} potatoes out of 4</h2>
-  <h3>{{this.title}}</h3>
-  <p>{{this.description}}</p>
+  <h3>Film: {{this.movieTitle}} - {{this.movieRating}} potatoes out of 4</h3>
+  <h2><a href="/reviews/{{this._id}}">{{this.title}}</a></h2>
   <br>
 {{/each}}

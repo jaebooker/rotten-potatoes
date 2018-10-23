@@ -38,10 +38,17 @@ app.get('/reviews/new', (req, res) => {
 app.post('/reviews', (req, res) => {
     Review.create(req.body).then((review) => {
         console.log("creating a new review in 5...")
-        res.redirect('/');
+        res.redirect('/reviews/${review._id}');
     }).catch((err) => {
         console.log(err.message);
     })
 })
+app.get('/reviews/:id', (req, res) => {
+    Review.findById(req.params.id).then((review) => {
+        res.render('reviews-show', { review: review })
+    }).catch((err) => {
+        console.log(err.message);
+    })
+});
 
 //Terrontino has released perhaps his finest work in this long-anticipated Gone With The Wind sequel, starring Jennifer Lawrence as a very captivating Scarlet, and Benedict Cumberbatch as the devious, but sexy, Rhett Butler. The film begins ten minutes after the first one ended, when Yankee deserters from the war decide to try to take Terra by force, but Scarlet is having none of it!
