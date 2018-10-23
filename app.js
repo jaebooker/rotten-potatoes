@@ -5,7 +5,7 @@ var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.get('/', (req, res) => {
-  res.send('Mornin, Starshine!')
+  res.render('home', { msg: 'I can run my routes with no handlebars.' });
 })
 
 app.listen(3000, () => {
