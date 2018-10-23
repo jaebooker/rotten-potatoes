@@ -3,14 +3,15 @@ const app = express()
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const reviews = require('./controllers/reviews')(app);
 //const reviews = require('./controllers/reviews')(app);
-const Review = mongoose.model('Review', {
-  title: String,
-  movieTitle: String,
-  movieRating: Number,
-  description: String
-});
-const reviews = require('./controllers/reviews')(app, Review);
+// const Review = mongoose.model('Review', {
+//   title: String,
+//   movieTitle: String,
+//   movieRating: Number,
+//   description: String
+// });
+//const reviews = require('./controllers/reviews')(app, Review);
 mongoose.connect('mongodb://localhost/rotten-potatoes');
 app.use(bodyParser.urlencoded({ extended: true }));
 var exphbs = require('express-handlebars');

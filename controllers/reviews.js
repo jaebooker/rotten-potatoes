@@ -1,7 +1,7 @@
-//const Review = require('../models/review');
+const Review = require('../models/review');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
-module.exports = function(app, Review) {
+module.exports = function(app) {
     app.use(methodOverride('_method'))
     app.use(bodyParser.urlencoded({ extended: true }));
     app.get('/', (req, res) => {
