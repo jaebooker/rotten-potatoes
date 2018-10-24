@@ -29,3 +29,4 @@ app.use(methodOverride('_method'))
 app.set('view engine', 'handlebars');
 // const reviews = require('./controllers/reviews')(app, Review);
 //Terrontino has released perhaps his finest work in this long-anticipated Gone With The Wind sequel, starring Jennifer Lawrence as a very captivating Scarlet, and Benedict Cumberbatch as the devious, but sexy, Rhett Butler. The film begins ten minutes after the first one ended, when Yankee deserters from the war decide to try to take Terra by force, but Scarlet is having none of it!
+module.exports = app;
